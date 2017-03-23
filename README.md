@@ -1,8 +1,8 @@
-## Project
+# Project
 
 This is project for AP Computer Science Principles
 
-## Tasks
+# Tasks
 
 1. Generate Ideas
 2. Design
@@ -10,13 +10,13 @@ This is project for AP Computer Science Principles
 4. Test
 
 
-## Requirements
+# Requirements
 
-# 1. Video
+## 1. Video
 
   Submit one video in .mp4, .wmv, .avi, or .mov format that demonstrates the running of at least one significant feature of your program. Your video must not exceed 1 minute in length and must not exceed 30MB in size.
 
-# 2. Written Responses
+## 2. Written Responses
 
   Submit one PDF file in which you respond directly to each prompt. Clearly label your responses 2a–2d in order. Your response to all prompts combined must not exceed 750 words, exclusive of the Program Code.
 
