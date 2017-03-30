@@ -7,6 +7,8 @@ function Background() {
     
     //Update values for Background
     this.tick() = function() {
+        
+        //we'll see what this algorithm will yield
         rValue += 3;
         gValue += 2;
         bValue += 1;
