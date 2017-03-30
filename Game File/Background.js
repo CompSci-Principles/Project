@@ -1,35 +1,56 @@
 function Background() {
 
     //RGB Values for the background
-    this.rValue = 0;
-    this.gValue = 0;
-    this.bValue = 0;
+    this.rValue = 50;
+    this.gValue = 50;
+    this.bValue = 50;
+    
+    //These are for the background algorithm
+    this.rVal = 0.5;
+    this.gVal = 0.10;
+    this.bVal = 0.15;
     
     //Update values for Background
-    this.tick() = function() {
+    this.tick = function() {
         
         //we'll see what this algorithm will yield
-        rValue += 3;
-        gValue += 2;
-        bValue += 1;
+        //Each value will increment and decrement in this
+        //algorithm to try and get all of the specturm
+        
+        if(this.rValue >= 255 || this.rValue < 50) {
+            this.rVal *= -1;
+        }
+        
+        if(this.gValue >= 255 || this.gValue < 50) {
+            this.gVal *= -1;
+        }
+        
+        if(this.bValue >= 255 || this.bValue < 50) {
+            this.bVal *= -1;
+        }
+        
+        //Update values
+        this.rValue += this.rVal;
+        this.gValue += this.gVal;
+        this.bValue += this.bVal;
     };
     
     //Getters for the RGB values
     this.getR = function() {
      
-        return rValue;
+        return this.rValue;
         
     };
     
        this.getG = function() {
      
-        return gValue;
+        return this.gValue;
         
     };
        
     this.getB = function() {
      
-        return bValue;
+        return this.bValue;
         
     };
 }
