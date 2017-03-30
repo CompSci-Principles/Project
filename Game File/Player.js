@@ -2,6 +2,8 @@ function Player() {
     //We need to declare and initialize variables for the player
     this.x = 100;
     this.y = 100;
+    this.width = 10;
+    this.height = 10;
     this.velY = 0;
     
     
@@ -9,12 +11,15 @@ function Player() {
     //Update values for the player
     this.tick = function(world) {
         
-      //This is to add movement to the player
-        this.y -= this.velY;
+        //This is to add movement to the player (if the player is in the air)
+        if(!(world.isOn(this.x, this.y, this.width, this.height)) || this.velY > 0) {
+            this.y -= this.velY;
+            //We also need some gravity
+            this.velY -= 0.1;
+        } else {
+            this.velY = 0;
+        }
         
-        //We also need some gravity
-        //we should play around with this number
-         this.velY -= 0.1;
         
         //This is what happends when you fall too far
         if(this.y > height) {
@@ -24,7 +29,7 @@ function Player() {
             
             //We also need some way to loose life once the player has fallen
         }
-    }
+    };
         
         //We will also need to see if the player is on a platform
         //and stop them from falling through
@@ -41,11 +46,11 @@ function Player() {
         //A velocity is added in the y direction
         this.velY = 5;   
         
-    }
+    };
     
     //Draw player to screen
     this.disp = function() {
     //We should decide on a size for the player later    
-     rect(this.x, this.y, 10, 10);   
+     rect(this.x, this.y, this.height, this.width);   
     };
 }

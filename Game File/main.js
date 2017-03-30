@@ -54,6 +54,8 @@ function tick() {
 //This will handle key events so the user
 //can interact with the program
 function keyPressed() {
- 
+    
+    //The player will jump
+    player.jump();
     
 }
