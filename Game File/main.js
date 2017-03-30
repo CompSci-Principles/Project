@@ -9,16 +9,16 @@ var back;
 //before drawing anything
 function setup() {
     
-	//Initializing objects
-	pcs = new PCS();
-	player = new Player();
-	world = new World();
-	back = new Background();
+    //Initializing objects
+    pcs = new PCS();
+    player = new Player();
+    world = new World();
+    back = new Background();
     
     
-	//Creating canvas for graphics and setting background color
-	createCanvas(750, 500);
-   	background(back.getColor());
+    //Creating canvas for graphics and setting background color
+    createCanvas(750, 500);
+    background(back.getR(), back.getG(), back.getB());
 
 	
 
@@ -28,14 +28,14 @@ function setup() {
 //called to run the program
 function draw() {
     
-	//We go through everything by importance
-	//and how we want to layer the graphics
-
-	tick();
-	background(back.getColor());
-	pcs.disp();
-	world.disp();
-	player.disp();
+    //We go through everything by importance
+    //and how we want to layer the graphics
+    
+    tick();
+    background(back.getR(), back.getG(), back.getB());
+    PCS.disp();
+    world.disp();
+    player.disp();
 }
 
 
@@ -43,10 +43,10 @@ function draw() {
 //the parts of the program
 function tick() {
  
-	pcs.tick();
-	player.tick();
-	world.tick();
-	back.tick();
+    pcs.tick();
+    player.tick(world);
+    world.tick();
+    back.tick();
     
 }
 
