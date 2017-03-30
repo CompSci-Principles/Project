@@ -1,7 +1,14 @@
+var pcs;
+
+
 function setup() {
-    createCanvas(750, 500);
+    pcs = new PCS();
+	createCanvas(750, 500);
     
-    
+    background(0);
+
+	
+
 }
 
 function draw() {
