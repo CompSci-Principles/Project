@@ -10,7 +10,7 @@ var back;
 function setup() {
     
     //Initializing objects
-    pcs = new PCS();
+    //pcs = new PCS();
     player = new Player();
     world = new World();
     back = new Background();
@@ -33,7 +33,7 @@ function draw() {
     
     tick();
     background(back.getR(), back.getG(), back.getB());
-    PCS.disp();
+    //PCS.disp();
     world.disp();
     player.disp();
 }
@@ -43,7 +43,7 @@ function draw() {
 //the parts of the program
 function tick() {
  
-    pcs.tick();
+    //pcs.tick();
     player.tick(world);
     world.tick();
     back.tick();
