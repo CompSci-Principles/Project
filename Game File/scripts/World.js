@@ -2,7 +2,7 @@ function World() {
     //We need to declare and initialize variables for the world   
     //create an array of platforms
     this.platforms = [];
-    this.count = 5;
+    this.count = 0;
     for(var x = 0; x < this.count; x++) {
         this.platforms.push(new Platform());
     }

@@ -5,8 +5,8 @@ function Player() {
     this.width = 10;
     this.height = 10;
     this.velY = 0;
-    this.velLimit = 10;
-    
+    this.velLimit = -10;
+ 
     
     
     //Update values for the player
@@ -14,11 +14,13 @@ function Player() {
         
         //This is to add movement to the player (if the player is in the air)
         if(!(world.isOn(this.x, this.y, this.width, this.height)) || this.velY > 0) {
-            if(this.velY <= this.velLimit) { 
             this.y -= this.velY;
+            
+            if(this.velY > this.velLimit) {
             //We also need some gravity
             this.velY -= 0.1;
             }
+
         } else {
             this.velY = 0;
         }
@@ -33,15 +35,6 @@ function Player() {
             //We also need some way to loose life once the player has fallen
         }
     };
-        
-        //We will also need to see if the player is on a platform
-        //and stop them from falling through
-        //I don't think this would work..
-//        if(world.isOn(this.x, this.y)) {
-//         velY = 0;   
-//        }
-//        
-//    };
         
     //This is the method for making the player jump    
     this.jump = function() {
