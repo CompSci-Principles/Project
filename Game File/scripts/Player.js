@@ -5,7 +5,7 @@ function Player() {
     this.width = 10;
     this.height = 10;
     this.velY = 0;
-    this.velLimit = -10;
+    this.velLimit = -5;
  
     
     

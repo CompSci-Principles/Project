@@ -44,8 +44,8 @@ function draw() {
 function tick() {
  
     //pcs.tick();
-    player.tick(world);
     world.tick();
+    player.tick(world);
     back.tick();
     
 }
