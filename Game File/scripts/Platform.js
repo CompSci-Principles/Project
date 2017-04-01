@@ -10,11 +10,16 @@ function Platform() {
     //Update the platform
     this.tick = function() {
        
-        //add movement to the platform
+        //Add movement to the platform
         this.x -= this.velX;
         
+        
+        //This is to create a wrap-around for the platforms
         if(this.x < 0 - this.width) {
-         this.x = 750 + this.width;   
+          
+            //We move them to the other side of the window
+            this.x = 750 + this.width;  
+            
         }
     };
     

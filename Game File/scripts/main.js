@@ -30,7 +30,6 @@ function draw() {
     
     //We go through everything by importance
     //and how we want to layer the graphics
-    
     tick();
     background(back.getR(), back.getG(), back.getB());
     //PCS.disp();
@@ -55,7 +54,7 @@ function tick() {
 //can interact with the program
 function keyPressed() {
     
-    //The player will jump
+    //The player will jump if any key is pressed
     player.jump();
     
 }
