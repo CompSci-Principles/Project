@@ -3,7 +3,7 @@ function PCS() {
 	
 	this.health = 3;
 
-	
+	this.score = 0;
 	//We want to make gitters for health and score
 	this.getHealth = function() {
 	
@@ -12,5 +12,31 @@ function PCS() {
 		
 		
 	};
-
+	
+	this.damage = function(){
+		this.health--;
+		
+	}
+	
+this.tick = function(){
+	this.score+= 3;
+	
+	
+	
+};
+	
+	this.disp = function(){
+		fill(100);
+		textSize(20);
+		this.result = "Health: ";
+		
+		for(var x = this.health; x > 0; x--) {
+			
+			this.result += "♥"
+			
+		}
+		text(this.result, 50, 10, 1000, 1000);
+		textSize(100);
+		text(this.score, 500/2, 400/2, 1000, 1000);
+	}
 }

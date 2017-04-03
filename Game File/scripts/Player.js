@@ -9,7 +9,7 @@ function Player() {
     
     
     //Update values for the player
-    this.tick = function(world) {
+    this.tick = function(world, pcs) {
         
         //This is to add forces to the player when they are in the air
         if(!(world.isOn(this.x, this.y, this.size, this.size)) || this.velY > 0) {
@@ -38,6 +38,9 @@ function Player() {
             
             //The player is teleported to the top
             this.y = 0 - 50; 
+					
+			//minus points
+			pcs.damage();
             
             //We also need some way to loose life once the player has fallen
         }
@@ -47,7 +50,7 @@ function Player() {
     this.jump = function() {
         
         //A velocity is added in the y direction
-        this.velY = 5;   
+        this.velY = 5; 
         
     };
     
