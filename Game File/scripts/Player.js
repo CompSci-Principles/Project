@@ -5,6 +5,7 @@ function Player() {
     this.size = 10;
     this.velY = 0;
     this.velLimit = -5;
+    this.jumps = 0;
  
     
     
@@ -29,6 +30,7 @@ function Player() {
         } else {
             //This is to stop the player from going through platforms
             this.velY = 0;
+            this.jumps = 0;
             
         }
         
@@ -49,15 +51,20 @@ function Player() {
     //This is the method for making the player jump    
     this.jump = function() {
         
+        if(this.jumps < 3) {
         //A velocity is added in the y direction
         this.velY = 5; 
+        this.jumps ++;
+        }
         
     };
     
     //Draw player to screen
     this.disp = function() {
-  
-     rect(this.x, this.y, this.size, this.size); 
+        
+        fill(171, 139, 249 );
+        noStroke();
+        rect(this.x, this.y, this.size, this.size); 
         
     };
 }

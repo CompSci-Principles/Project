@@ -12,6 +12,12 @@ function PCS() {
 		
 		
 	};
+    this.getScore = function() {
+     
+        
+        return this.score;
+        
+    }
 	
 	this.damage = function(){
 		this.health--;
@@ -26,7 +32,8 @@ this.tick = function(){
 };
 	
 	this.disp = function(){
-		fill(100);
+		fill(0, 213, 224);
+        noStroke();
 		textSize(20);
 		this.result = "Health: ";
 		

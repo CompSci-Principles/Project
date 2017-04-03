@@ -2,7 +2,7 @@ function World() {
     //We need to declare and initialize variables for the world   
     
     this.platforms = [];
-    this.count = 5;
+    this.count = 10;
     
     //This is to initialize all of the elements in the
     //platforms array with platform objects
@@ -18,7 +18,7 @@ function World() {
         //We cycle through all of the platforms
         for(var x = 0; x < this.count; x++) {
             
-            //We update each platform object
+            //We update each platform object 
             this.platforms[x].tick();
             
         }
