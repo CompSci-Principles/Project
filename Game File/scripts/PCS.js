@@ -82,7 +82,7 @@ function PCS() {
             for(var x = this.health; x > 0; x--) {
 
                 //We need to find a different character, because this doesn't work on all computers
-                this.result += "♥"
+                this.result += "X"
 
             }
             text(this.result, 50, 10, 1000, 1000);

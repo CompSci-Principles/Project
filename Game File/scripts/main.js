@@ -18,9 +18,7 @@ function setup() {
     gameOn = false;
     //start a new game
     start();
-
-	
-
+    
 }
 
 function start() {
