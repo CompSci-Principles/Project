@@ -63,9 +63,10 @@ function Player() {
     
     //Draw player to screen
     this.disp = function() {
-        
+
         fill(171, 139, 249 );
         noStroke();
+        //stroke(255);
         rect(this.x, this.y, this.size, this.size); 
         
     };

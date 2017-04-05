@@ -6,6 +6,7 @@ var world;
 var back;
 var gameOver;
 var gameOn;
+var r, g, b;
 
 //This is the setup function P5 uses to set up the program
 //before drawing anything
@@ -14,6 +15,11 @@ function setup() {
     //Initializing pcs, since the start function doesn't
     //create a new one
     pcs = new PCS();
+    
+    r = random(0, 255);
+    g = random(0, 255);
+    b = random(0, 255);
+
     
     gameOn = false;
     //start a new game
@@ -32,7 +38,8 @@ function start() {
     
     //Creating canvas for graphics and setting background color
     createCanvas(750, 500);
-    background(66, 238, 244);
+//    background(66, 238, 244);
+    background(r, g, b);
     
 }
 
@@ -43,7 +50,8 @@ function draw() {
     //We go through everything by importance
     //and how we want to layer the graphics
     
-    background(66, 238, 244);
+//    background(66, 238, 244);
+    background(r, g, b);
     
     if(!gameOver) {
         
@@ -105,6 +113,9 @@ function keyPressed() {
     if(!gameOver) {
     //The player will jump if any key is pressed
     player.jump();
+    r = random(0, 255);
+    g = random(0, 255);
+    b = random(0, 255);
 
         if(!gameOn) {
 
