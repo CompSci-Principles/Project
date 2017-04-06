@@ -34,7 +34,7 @@ function World() {
         //We cycle through all of the platforms
         for(var i = 0; i < this.count; i++) {
     
-            //If the object is within the x boundaries and close enough to the platfrom, it is touching the platform
+            //If the object is within the x boundaries and close enough to the platform, it is touching the platform
             if(x >= this.platforms[i].getX() && ((x + boxWidth) < (this.platforms[i].getX() + this.platforms[i].getWidth()))) {
                 if(this.platforms[i].getY() - (y + boxHeight) < 3 && this.platforms[i].getY() - (y + boxHeight) > -3) {
 
