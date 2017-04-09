@@ -1,6 +1,15 @@
+/*
+    DESCRIPTION: This class handles multiple platform objects.
+    
+    Notes:
+        Name: scripts/World.js
+        Author: John S. Samuels, II
+        Date: 4/9/2017
+
+*/
+
 function World() {
     //We need to declare and initialize variables for the world   
-    
     this.platforms = [];
     this.count = 10;
     

@@ -1,3 +1,13 @@
+/*
+    DESCRIPTION: This class acts as a class-object, and handles the creation and movement of a player using the p5.js libraries.
+    
+    Notes:
+        Name: scripts/Player.js
+        Author: John S. Samuels, II
+        Date: 4/9/2017
+
+*/
+
 function Player() {
     //We need to declare and initialize variables for the player
     this.x = 100;
@@ -40,10 +50,8 @@ function Player() {
             //The player is teleported to the top
             this.y = 0 - 50; 
 					
-			//minus points
+			//minus health
 			pcs.damage(gameOn);
-            
-            //We also need some way to loose life once the player has fallen
         }
         
         
@@ -53,9 +61,13 @@ function Player() {
     //This is the method for making the player jump    
     this.jump = function() {
         
+        //This checks if the player has jumps left
         if(this.jumps < 3) {
+            
         //A velocity is added in the y direction
         this.velY = 5; 
+            
+        //The player used one of their jumps
         this.jumps++;
         }
         
@@ -66,7 +78,6 @@ function Player() {
 
         fill(171, 139, 249 );
         noStroke();
-        //stroke(255);
         rect(this.x, this.y, this.size, this.size); 
         
     };

@@ -1,3 +1,13 @@
+/*
+    DESCRIPTION: This class acts as a class-object for a single platform, and handles the generation and movement of a platform object.
+    
+    Notes:
+        Name: scripts/Platform.js
+        Author: John S. Samuels, II
+        Date: 4/9/2017
+
+*/
+
 function Platform() {
     
     //Variables for a platform
@@ -30,13 +40,12 @@ function Platform() {
     this.disp = function() {
         
         fill(this.r, this.g, this.b);
-        //noFill();
-        //stroke(255);
         noStroke();
         rect(this.x, this.y, this.width, this.height);
         
     };
     
+    //This is for generating a platform with new characteristcs
     this.generate = function() {
         
         this.width = random(50, 200);

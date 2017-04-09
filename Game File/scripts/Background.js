@@ -1,3 +1,13 @@
+/*
+    DESCRIPTION: This class contains methods for creating and computing different RGB values using the p5.js libraries for use as a background color generator.
+    
+    Notes:
+        Name: scripts/Background.js
+        Author: John S. Samuels, II
+        Date: 4/9/2017
+
+*/
+
 function Background() {
 
     //RGB Values for the background
